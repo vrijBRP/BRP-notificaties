@@ -1,0 +1,56 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "VrijBRP notificaties API.",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://acc-vrijbrp-nijmegen.commonground.nu/rest/*"
+    }
+  ],
+  "tags": [
+    {
+      "name": "evoverlijden"
+    }
+  ],
+  "paths": {
+    "/evoverlijden/": {
+      "get": {
+        "tags": [
+          "evoverlijden"
+        ],
+        "operationId": "verb2",
+        "responses": {
+          "200": {
+            "content": {}
+          }
+        }
+      }
+    },
+    "/evoverlijden/timestamp/{timestamp}": {
+      "get": {
+        "tags": [
+          "evoverlijden"
+        ],
+        "operationId": "verb1",
+        "parameters": [
+          {
+            "name": "timestamp",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {}
+          }
+        }
+      }
+    }
+  },
+  "components": {}
+}
